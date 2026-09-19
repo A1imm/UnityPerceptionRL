@@ -57,10 +57,18 @@ The scene names and training configuration paths depend on the experiment being 
 ```text
 UnityPerceptionRL/
 ├── Assets/                 # Scenes, scripts, prefabs, models, and training configurations
-├── EvaluationResults/      # Selected evaluation outputs
 ├── Packages/               # Unity package manifest and lock file
 ├── ProjectSettings/        # Unity project configuration
-├── ResearchResults/        # Data and figures used in the experimental analysis
+├── ResearchResults/        # Training and evaluation data used in the analysis
+│   ├── Evaluation/         # Evaluation results, including exported CSV files
+│   └── Training/
+│       ├── CSV/
+│       │   ├── Processed/  # Processed data used to create plots
+│       │   └── Raw/        # Raw training data for individual agents
+│       └── TensorBoard/    # TensorBoard data grouped by agent and task
+├── docs/                   # Images and recordings used in this README
+│   ├── images/
+│   └── videos/
 ├── .gitignore              # Files excluded from version control
 └── README.md               # Project documentation
 ```
@@ -75,13 +83,29 @@ The repository contains the Unity project and selected research artifacts requir
 
 ## Results
 
-The experiments cover all three task types for both perception methods. Selected plots and evaluation data are available in the `ResearchResults` and `EvaluationResults` directories.
+The experiments cover all three task types for both perception methods. Selected training and evaluation data are available in the `ResearchResults` directory.
 
-<!-- Add a representative image or results plot after publishing the repository. Example:
 <p align="center">
-  <img src="ResearchResults/example-result.png" alt="Comparison of raycast and visual agents" width="700"/>
+  <img src="docs/images/success-rate-comparison.png" alt="Success rate comparison between raycast-based and visual perception" width="850"/>
 </p>
--->
+
+<p align="center">
+  <em>Evaluation success rates for raycast-based and visual perception across the three task types.</em>
+</p>
+
+Both agents achieved a 100% success rate in the object collection task. The difference became more noticeable as task complexity increased. In the combined task, the raycast-based agent achieved a 95.2% success rate, while the visual agent achieved 67.6%.
+
+## Demonstration
+
+<p align="center">
+  <a href="docs/videos/combined-task-demo.mp4">
+    <img src="docs/images/combined-task-preview.png" alt="Combined task environment demonstration" width="600"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="docs/videos/combined-task-demo.mp4">▶ Watch the combined-task recording</a>
+</p>
 
 ## Academic Context
 
@@ -95,4 +119,3 @@ This project was developed as part of a master's thesis at:
 **inż. Alan Pawleta**  
 Silesian University of Technology  
 Faculty of Automatic Control, Electronics and Computer Science
-
