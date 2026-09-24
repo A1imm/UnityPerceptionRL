@@ -116,6 +116,6 @@ This project was developed as part of a master's thesis at:
 
 ## Author
 
-**inż. Alan Pawleta**  
+**mgr inż. Alan Pawleta**  
 Silesian University of Technology  
 Faculty of Automatic Control, Electronics and Computer Science
