@@ -116,6 +116,7 @@ This project was developed as part of a master's thesis at:
 
 ## Author
 
-**mgr inż. Alan Pawleta**  
-Silesian University of Technology  
-Faculty of Automatic Control, Electronics and Computer Science
+**Alan Pawleta**
+
+Computer Science — Interactive 3D Graphics  
+Silesian University of Technology
